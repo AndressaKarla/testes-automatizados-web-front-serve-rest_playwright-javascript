@@ -1,0 +1,6 @@
+node_modules/
+/test-results/
+/playwright-report/
+/playwright/.cache/
+/tests/support/fixtures/*.json
+!/tests/support/fixtures/*.example.json
