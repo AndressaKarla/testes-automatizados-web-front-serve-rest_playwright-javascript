@@ -22,8 +22,8 @@ jobs:
 
       - name: Passo 3 - Instalar node versão 18
         uses: actions/setup-node@v3
-          with:
-            node-version: 18
+        with:
+          node-version: 18
 
       - name: Passo 4 - Instalar dependências
         # forçar, mesmo tendo possíveis conflitos, a instalação das dependências do projeto do arquivo "package.json
