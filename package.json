@@ -1,11 +1,17 @@
 {
   "name": "testes-automatizados-web-front-serve-rest_playwright-javascript",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
+  "description": "Projeto de Testes Automatizados E2E no front e API REST do ServeRest em Playwright e Javascript",
+  "main": "playwright.config.js",
+  "scripts": {
+    "pw:ui": "playwright test --ui",
+    "pw:ui:local": "ENV environment=local playwright test --ui",
+    "test": "playwright test --project=chromium",
+    "test:local": "ENV environment=local playwright test --project=chromium",
+    "test:headed": "playwright test --project=chromium --headed",
+    "test:local:headed": "ENV environment=local playwright test --project=chromium --headed"
+  },
+  "author": "Andressa Karla",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.42.1"

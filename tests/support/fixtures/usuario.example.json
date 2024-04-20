@@ -1,0 +1,7 @@
+{
+    "adminValido": {
+        "nomeValido": "informar-nome-usuario-admin-valido",
+        "emailValido": "informar-mesmo-email-usuario-admin-valido-fixture-login@qa.com",
+        "senhaValida": "informar-mesma-senha-usuario-admin-valido-fixture-login"
+    }
+}
