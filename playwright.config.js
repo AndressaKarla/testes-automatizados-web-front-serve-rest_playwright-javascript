@@ -13,15 +13,15 @@ module.exports = defineConfig({
     timeout: 5000
   },
   
-  fullyParallel: true,
+  fullyParallel: false,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: [['html', { open: 'never' }]], 
 
   use: {
     actionTimeout: 0,
-    baseURL: baseURLFront,
+    baseURL: baseURIAPI,
     
     viewport: {
       width: 1280,
@@ -37,8 +37,11 @@ module.exports = defineConfig({
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: { 
+        ...devices['Desktop Chrome'],  
+        baseURL: baseURLFront
+      },
     }
   ]
-});
+})
 

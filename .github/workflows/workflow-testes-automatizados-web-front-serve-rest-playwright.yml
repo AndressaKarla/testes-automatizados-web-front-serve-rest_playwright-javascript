@@ -1,4 +1,6 @@
 name: Pipeline Testes Automatizados Web Front ServeRest Playwright
+
+# executa o workflow toda vez que for realizado um push ou pull-request no repositório
 on:
   push:
     branches: [ "main" ]
@@ -16,9 +18,10 @@ jobs:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v3
 
-      - name: Passo 2 - Redirecionar o conteúdo de "secrets.LOGIN_ENV" para o arquivo "login.json"
+      - name: Passo 2 - Redirecionar os conteúdos de "secrets.LOGIN_ENV", "secrets.USUARIO_ENV", para os arquivos "login.json", "usuario.json", etc
         run: |
           echo '${{ secrets.LOGIN_ENV }}' > ./tests/support/fixtures/login.json
+          echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
 
       - name: Passo 3 - Instalar node versão 18
         uses: actions/setup-node@v3
@@ -26,7 +29,7 @@ jobs:
           node-version: 18
 
       - name: Passo 4 - Instalar dependências do projeto
-        # forçar, mesmo tendo possíveis conflitos, a instalação das dependências do projeto do arquivo "package.json
+        # forçar, mesmo tendo possíveis conflitos, a instalação das dependências do projeto do arquivo "package.json"
         run: npm install --force
 
       - name: Passo 5 - Instalar navegadores do Playwright
