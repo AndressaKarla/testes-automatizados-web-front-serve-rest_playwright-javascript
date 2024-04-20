@@ -20,8 +20,8 @@ jobs:
 
       - name: Passo 2 - Redirecionar os conteúdos de "secrets.LOGIN_ENV", "secrets.USUARIO_ENV", para os arquivos "login.json", "usuario.json", etc
         run: |
-          echo '${{ secrets.LOGIN_ENV }}' > ./cypress/fixtures/login.json
-          echo '${{ secrets.USUARIO_ENV }}' > ./cypress/fixtures/usuario.json
+          echo '${{ secrets.LOGIN_ENV }}' > ./tests/support/fixtures/login.json
+          echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
 
       - name: Passo 3 - Instalar node versão 18
         uses: actions/setup-node@v3
