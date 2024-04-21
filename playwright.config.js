@@ -1,6 +1,6 @@
 const { defineConfig, devices } = require('@playwright/test');
 
-const environment = process.env.environment || 'dev'
+const environment = process.env.environment || 'prod'
 const config = require(`./tests/support/environments/${environment}`)
 const baseURLFront = config.baseUrl
 const baseURIAPI = config.baseUri
