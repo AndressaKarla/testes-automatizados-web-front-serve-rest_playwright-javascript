@@ -7,9 +7,13 @@
     "pw:ui": "playwright test --ui",
     "pw:ui:local": "ENV environment=local playwright test --ui",
     "test": "playwright test --project=chromium",
+    "test:ff": "playwright test --project=firefox",
     "test:local": "ENV environment=local playwright test --project=chromium",
+    "test:local:ff": "ENV environment=local playwright test --project=firefox",
     "test:headed": "playwright test --project=chromium --headed",
-    "test:local:headed": "ENV environment=local playwright test --project=chromium --headed"
+    "test:headed:ff": "playwright test --project=firefox --headed",
+    "test:local:headed": "ENV environment=local playwright test --project=chromium --headed",
+    "test:local:headed:ff": "ENV environment=local playwright test --project=firefox --headed"
   },
   "author": "Andressa Karla",
   "license": "ISC",

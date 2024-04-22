@@ -2,7 +2,7 @@
 # Projeto de Testes Automatizados Web | Playwright | Javascript | Page Objects | GitHub Actions :test_tube:
 ---
 # :information_source: Introdução
-Me baseei e adaptei parte do que foi ensinado nos cursos ["Playwright eXpress"](https://www.udemy.com/course/playwright-express) e ["Playwright Zombie Edition"](https://www.udemy.com/course/playwright-zombie) da ["QAx"](https://www.udemy.com/user/weare-qax) para esse projeto "testes-automatizados-web-front-serve-rest_playwright-javascript" que é executado em um ambiente de produção no ["front"](https://front.serverest.dev) e na ["API REST"](https://serverest.dev) do ["ServeRest"](https://github.com/ServeRest) que simula uma loja virtual, e que foi desenvolvido com o objetivo de me aprofundar um pouco mais nos estudos sobre testes automatizados web em Playwright, Javascript, Page Objects e GitHub Actions.
+Me baseei e adaptei parte do que foi ensinado nos cursos ["Playwright eXpress"](https://www.udemy.com/course/playwright-express) e ["Playwright Zombie Edition"](https://www.udemy.com/course/playwright-zombie) da ["QAx"](https://www.udemy.com/user/weare-qax) para esse projeto "testes-automatizados-web-front-serve-rest_playwright-javascript" que é executado em um ambiente de produção no ["front"](https://front.serverest.dev) e na ["API REST"](https://serverest.dev) do ["ServeRest"](https://github.com/ServeRest) que simula uma loja virtual, nos navegadores Chrome e Firefox, Sistemas Operacionais Windows e Linux Ubuntu, e que foi desenvolvido com o objetivo de me aprofundar um pouco mais nos estudos sobre testes automatizados web em Playwright, Javascript, Page Objects e GitHub Actions.
 
 
 ---
