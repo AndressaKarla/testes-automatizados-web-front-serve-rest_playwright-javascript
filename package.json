@@ -1,7 +1,7 @@
 {
   "name": "testes-automatizados-web-front-serve-rest_playwright-javascript",
   "version": "1.0.0",
-  "description": "Projeto de Testes Automatizados E2E no front e API REST do ServeRest em Playwright e Javascript",
+  "description": "Projeto de Testes Automatizados Web no front e API REST do ServeRest em Playwright e Javascript",
   "main": "playwright.config.js",
   "scripts": {
     "pw:ui": "playwright test --ui",

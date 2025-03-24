@@ -12,19 +12,17 @@ on:
 
 jobs:
   playwright-chrome:
-    # agente de execução/runner do tipo máquina virtual bem enxuta, sem interface gráfica
+    # agente de execução/runner 
     runs-on: ubuntu-latest
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Passo 2 - Redirecionar os conteúdos de "secrets.LOGIN_ENV", "secrets.USUARIO_ENV", para os arquivos "login.json", "usuario.json", etc
-        run: |
-          echo '${{ secrets.LOGIN_ENV }}' > ./tests/support/fixtures/login.json
-          echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
+      - name: Passo 2 - Redirecionar os conteúdos de "secrets.USUARIO_ENV", para os fixtures "usuario.json", etc
+        run: echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
 
       - name: Passo 3 - Instalar node versão 18
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -35,24 +33,24 @@ jobs:
       - name: Passo 5 - Instalar navegadores do Playwright
         run: npx playwright install --with-deps
 
-      - name: Passo 6 - Executar testes em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
+      - name: Passo 6 - Executar testes automatizados Web no navegador chrome em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
         run: npm run test
 
       - name: Passo 7 - Armazenar os resultados dos testes em screenshots e vídeos
-        uses: actions/upload-artifact@v3
-        # expressão condicional para que sempre seja executado independentemente dos resultados dos steps anteriores
         if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        # expressão condicional para que sempre seja executado independentemente dos resultados dos steps anteriores
         with:
           name: playwright-screenshots-videos-chrome
           path: ./test-results
           # armazena por 30 dias
           retention-days: 30
 
-      - name: Passo 8 - Armazenar os resultados dos testes em relatório html
-        uses: actions/upload-artifact@v3
+      - name: Passo 8 - Armazenar os resultados dos testes em report html
         if: ${{ always() }}
+        uses: actions/upload-artifact@v4
         with:
-          name: playwright-relatorio-html-chrome
+          name: playwright-report-html-chrome
           path: ./playwright-report
           retention-days: 30
           
@@ -62,15 +60,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Passo 2 - Redirecionar os conteúdos de "secrets.LOGIN_ENV", "secrets.USUARIO_ENV", para os arquivos "login.json", "usuario.json", etc
-        run: |
-          echo '${{ secrets.LOGIN_ENV }}' > ./tests/support/fixtures/login.json
-          echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
+      - name: Passo 2 - Redirecionar os conteúdos de "secrets.USUARIO_ENV", para os fixtures "usuario.json", etc
+        run: echo '${{ secrets.USUARIO_ENV }}' > ./tests/support/fixtures/usuario.json
 
       - name: Passo 3 - Instalar node versão 18
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: 18
 
@@ -80,21 +76,21 @@ jobs:
       - name: Passo 5 - Instalar navegadores do Playwright
         run: npx playwright install --with-deps
 
-      - name: Passo 6 - Executar testes em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
+      - name: Passo 6 - Executar testes automatizados Web no navegador firefox em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
         run: npm run test:ff
 
       - name: Passo 7 - Armazenar os resultados dos testes em screenshots e vídeos
-        uses: actions/upload-artifact@v3
         if: ${{ always() }}
+        uses: actions/upload-artifact@v4
         with:
           name: playwright-screenshots-videos-firefox
           path: ./test-results
           retention-days: 30
 
-      - name: Passo 8 - Armazenar os resultados dos testes em relatório html
-        uses: actions/upload-artifact@v3
+      - name: Passo 8 - Armazenar os resultados dos testes em report html
         if: ${{ always() }}
+        uses: actions/upload-artifact@v4
         with:
-          name: playwright-relatorio-html-firefox
+          name: playwright-report-html-firefox
           path: ./playwright-report
           retention-days: 30
