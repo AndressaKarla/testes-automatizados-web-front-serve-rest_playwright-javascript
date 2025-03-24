@@ -13,7 +13,7 @@ on:
 jobs:
   playwright-chrome:
     # agente de execução/runner 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v4
@@ -57,7 +57,7 @@ jobs:
   playwright-firefox:
     # esse job "playwright-firefox" somente é executado se o job anterior "playwright-chrome" for executado com sucesso
     needs: playwright-chrome
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v4
