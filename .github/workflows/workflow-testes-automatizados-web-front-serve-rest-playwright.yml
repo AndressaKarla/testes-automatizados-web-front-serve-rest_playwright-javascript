@@ -13,7 +13,7 @@ on:
 jobs:
   playwright-chrome:
     # agente de execução/runner 
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v4
@@ -31,7 +31,7 @@ jobs:
         run: npm install --force
 
       - name: Passo 5 - Instalar navegadores do Playwright
-        run: sudo npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: Passo 6 - Executar testes automatizados Web no navegador chrome em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
         run: npm run test
@@ -57,7 +57,7 @@ jobs:
   playwright-firefox:
     # esse job "playwright-firefox" somente é executado se o job anterior "playwright-chrome" for executado com sucesso
     needs: playwright-chrome
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Passo 1 - Obter cópia do código-fonte do repositório
         uses: actions/checkout@v4
@@ -74,7 +74,7 @@ jobs:
         run: npm install --force
 
       - name: Passo 5 - Instalar navegadores do Playwright
-        run: sudo npx playwright install --with-deps
+        run: npx playwright install --with-deps
 
       - name: Passo 6 - Executar testes automatizados Web no navegador firefox em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes
         run: npm run test:ff
