@@ -7,7 +7,7 @@ class Api {
         this.baseUri = playwrightConfig.use.baseURL
     }
 
-    async obterPorEmailEincluirUsuarioAdmin(nomeSobrenome, email, senha) {
+    async obterPorEmailEcadastrarUsuarioAdminPelaAPI(nomeSobrenome, email, senha) {
         const getEmailUsuarioAdmin = await this.request.get(`${this.baseUri}/usuarios?email=${email}`)
         const retornoGetEmailUsuarioAdmin = JSON.parse(await getEmailUsuarioAdmin.text())
 

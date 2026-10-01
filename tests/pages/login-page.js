@@ -11,7 +11,7 @@ class LoginPage {
         await this.page.goto('/login')
     }
 
-    async realizarLoginBotaoEntrar(email, senha) {
+    async realizarLogin(email, senha) {
         await this.campoEmail.waitFor('visible')
         await this.campoEmail.fill(email)
 
