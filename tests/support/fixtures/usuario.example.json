@@ -1,14 +1,14 @@
 {
     "adminValido": {
-        "nomeSobrenomeValido": "informar-nome-sobrenome-usuario-admin-valido",
+        "nomeValido": "informar-nome-sobrenome-usuario-admin-valido",
         "emailValido": "informar-email-usuario-admin-valido@qa.com",
-        "senhaValida": "informar-senha-usuario-admin-valido"
+        "senhaValida": "informar-senha-usuario-admin-valida"
     },
     "invalido": {
-        "emailInvalidoVazio": "deixar-apenas-as-aspas-duplas",
-        "senhaInvalidaVazia": "deixar-apenas-as-aspas-duplas",
+        "emailInvalidoVazio": "",
+        "senhaInvalidaVazia": "",
         "emailInvalidoDominioSemPonto": "informar-email-usuario-invalido-dominio-sem-ponto@outlook",
-        "senhaValida": "informar-senha-usuario-valido",
+        "senhaValida": "informar-senha-usuario-valida",
         "emailInvalidoNaoCadastrado": "informar-email-usuario-invalido-nao-cadastrado@gmail.com",
         "senhaInvalidaNaoCadastrada": "informar-senha-usuario-invalido-nao-cadastrada"
     }

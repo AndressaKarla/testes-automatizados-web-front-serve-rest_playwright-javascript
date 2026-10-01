@@ -1,5 +1,4 @@
----
-# :test_tube: Projeto de Testes Funcionais Automatizados Web | Playwright | Javascript | Page Objects | GitHub Actions 
+# :test_tube: Projeto de Testes Funcionais Automatizados Web | Playwright v1.42.1 | Javascript | Page Objects | GitHub Actions 
 [![Badge ServeRest](https://img.shields.io/badge/API-ServeRest-green)](https://github.com/ServeRest/ServeRest/)
 ---
 # :information_source: Introdução
@@ -10,7 +9,7 @@ Me baseei e adaptei parte do que foi ensinado nos cursos ["Playwright eXpress"](
 # :dart: Executar os testes automatizados Web no navegador chrome, firefox, etc em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes no GitHub Actions
 - Nesse repositório, acessar a aba "Actions"
 - Na seção "Actions", clicar em "Pipeline Testes Automatizados Web Front ServeRest Playwright"
-- Em "This workflow has a workflow_dispatch event trigger.", clicar em "Run workflow" > "Run workflow" para executar testes automatizados Web no navegador chrome, firefox, etc em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes no GitHub Actions [com os conteúdos de "secrets.USUARIO_ENV", etc (baseado nos arquivos ["usuario.example.json"](https://github.com/AndressaKarla/testes-automatizados-web-front-serve-rest_playwright-javascript/blob/main/tests/support/fixtures/usuario.example.json), etc, e configurados na aba "Settings" desse repositório > "Secrets and variables" > "Actions" > "Secrets" > "Repository secrets") que foram redirecionados para os arquivos "usuario.json", etc]
+- Em "This workflow has a workflow_dispatch event trigger.", clicar em "Run workflow" > "Run workflow" para executar testes automatizados Web no navegador chrome, firefox, etc em modo headless (2º plano) em um ambiente de produção e Gerar os resultados dos testes no GitHub Actions [com os conteúdos de "secrets.USUARIO_ENV", etc (baseado nos arquivos ["usuario.example.json"](./tests/support/fixtures/usuario.example.json), etc, e configurados na aba "Settings" desse repositório > "Secrets and variables" > "Actions" > "Secrets" > "Repository secrets") que foram redirecionados para os arquivos "usuario.json", etc]
 - Após o término da execução, clicar na run "Pipeline Testes Automatizados Web Front ServeRest Playwright"
 - Na seção "Artifacts", clicar em "playwright-report-html-chrome", "playwright-report-html-firefox, etc 
 - Na janela aberta, escolher um diretório para baixar a pasta compactada "playwright-report-html-chrome.zip", "playwright-report-html-firefox.zip", etc
@@ -37,12 +36,12 @@ Me baseei e adaptei parte do que foi ensinado nos cursos ["Playwright eXpress"](
 - test-failed-x.png
 ```
 
-Ex.1: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-cca59-te-é-seu-sistema-para-administrar-seu-ecommerce-chromium"
+Ex.1: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-077d0-extos-de-boas-vindas-e-de-administrar-ecommerce-chromium"
 ```
 - test-finished-1.png
 ``` 
 
-Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
+Ex.2: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-8bdb8-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
 ```
 - test-failed-1.png
 ``` 
@@ -53,12 +52,12 @@ Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-
 - video.webm
 ```
 
-Ex.1: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-cca59-te-é-seu-sistema-para-administrar-seu-ecommerce-chromium"
+Ex.1: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-077d0-extos-de-boas-vindas-e-de-administrar-ecommerce-chromium"
 ```
 - video.webm
 ``` 
 
-Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
+Ex.2: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-8bdb8-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
 ```
 - video.webm
 ```
@@ -77,7 +76,7 @@ Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-
 
 ## :hammer_and_wrench: Instalar todas as dependências necessárias 
 ### Desinstalar completamente Node.js e npm que já foram instalados em algum outro momento
-- Seguir os passos apresentados nesse link ["Guia Passo a Passo para Remover o Node.js no Windows"](https://cursos.qaxperience.com/pt/blog/guia-passo-a-passo-para-remover-o-node-no-windows)
+- Seguir os passos apresentados neste [link](https://www.google.com/search?q=desinstalar+completamente+nodejs+e+res%C3%ADduos+windows+11+pt-br+sem+programas+terceiros)
   
 ### Node versão 18.12.1
 - Baixar e instalar o [node v18.12.1](https://nodejs.org/dist/v18.12.1/) > node-v18.12.1-x64.msi
@@ -168,7 +167,7 @@ code .
 # :hammer_and_wrench: Criar arquivos "usuario.json", etc, informando os dados com base nos arquivos "usuario.example.json", etc
 - No VS Code aberto anteriormente, acessar "tests > support > fixtures"
 - Criar o arquivo "usuario.json"
-  - Informar os dados com base no arquivo ["usuario.example.json"](https://github.com/AndressaKarla/testes-automatizados-web-front-serve-rest_playwright-javascript/blob/main/tests/support/fixtures/usuario.example.json)
+  - Informar os dados com base no arquivo ["usuario.example.json"](./tests/support/fixtures/usuario.example.json)
   - Salvar o arquivo "usuario.json" com os dados informados anteriormente
 
 ---
@@ -230,7 +229,7 @@ Ex.:
 ```
 cd "C:\Projetos\Automação\testes-automatizados-web-front-serve-rest_playwright-javascript"
 ```
-- Informar o comando abaixo para executar todas as funcionalidades e/ou cenários do projeto no navegador chrome em modo headless (2º plano) em um ambiente de produção (mesmo comando que é utilizado no "Passo 6" do job "playwright-chrome" da "Pipeline Testes Automatizados Web Front ServeRest Playwright" em ".github > workflows > [workflow-testes-automatizados-web-front-serve-rest-playwright.yml](https://github.com/AndressaKarla/testes-automatizados-web-front-serve-rest_playwright-javascript/blob/main/.github/workflows/workflow-testes-automatizados-web-front-serve-rest-playwright.yml)" no GitHub Actions) e Gerar os resultados dos testes no computador (test-results, playwright-report):
+- Informar o comando abaixo para executar todas as funcionalidades e/ou cenários do projeto no navegador chrome em modo headless (2º plano) em um ambiente de produção (mesmo comando que é utilizado no "Passo 6" do job "playwright-chrome" da "Pipeline Testes Automatizados Web Front ServeRest Playwright" em ".github > workflows > [workflow-testes-automatizados-web-front-serve-rest-playwright.yml](./.github/workflows/workflow-testes-automatizados-web-front-serve-rest-playwright.yml)" no GitHub Actions) e Gerar os resultados dos testes no computador (test-results, playwright-report):
 ```
 npm run test
 ```
@@ -293,7 +292,7 @@ Ex.:
 ```
 cd "C:\Projetos\Automação\testes-automatizados-web-front-serve-rest_playwright-javascript"
 ```
-- Informar o comando abaixo para executar todas as funcionalidades e/ou cenários do projeto no navegador firefox em modo headless (2º plano) em um ambiente de produção (mesmo comando que é utilizado no "Passo 6" do job "playwright-firefox" da "Pipeline Testes Automatizados Web Front ServeRest Playwright" em ".github > workflows > [workflow-testes-automatizados-web-front-serve-rest-playwright.yml](https://github.com/AndressaKarla/testes-automatizados-web-front-serve-rest_playwright-javascript/blob/main/.github/workflows/workflow-testes-automatizados-web-front-serve-rest-playwright.yml)" no GitHub Actions) e Gerar os resultados dos testes no computador (test-results, playwright-report):
+- Informar o comando abaixo para executar todas as funcionalidades e/ou cenários do projeto no navegador firefox em modo headless (2º plano) em um ambiente de produção (mesmo comando que é utilizado no "Passo 6" do job "playwright-firefox" da "Pipeline Testes Automatizados Web Front ServeRest Playwright" em ".github > workflows > [workflow-testes-automatizados-web-front-serve-rest-playwright.yml](./.github/workflows/workflow-testes-automatizados-web-front-serve-rest-playwright.yml)" no GitHub Actions) e Gerar os resultados dos testes no computador (test-results, playwright-report):
 ```
 npm run test:ff
 ```
@@ -315,12 +314,12 @@ npm run test:ff
 - test-failed-x.png
 ```
 
-Ex.1: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-cca59-te-é-seu-sistema-para-administrar-seu-ecommerce-chromium"
+Ex.1: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-077d0-extos-de-boas-vindas-e-de-administrar-ecommerce-chromium"
 ```
 - test-finished-1.png
 ``` 
 
-Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
+Ex.2: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-8bdb8-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
 ```
 - test-failed-1.png
 ``` 
@@ -332,12 +331,12 @@ Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-
 - video.webm
 ```
 
-Ex.1: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-cca59-te-é-seu-sistema-para-administrar-seu-ecommerce-chromium"
+Ex.1: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-077d0-extos-de-boas-vindas-e-de-administrar-ecommerce-chromium"
 ```
 - video.webm
 ``` 
 
-Ex.2: "test-results > login-entrar-Funcionalidade-Tela-Login---Botão-227d2-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
+Ex.2: "test-results > login-Funcionalidade-Tela-Login---Como-usuário-8bdb8-gem-×Email-é-obrigatório×Password-é-obrigatório-firefox"
 ```
 - video.webm
 ```
